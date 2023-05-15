@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const sliders = require('./data/sliders.json')
 require("dotenv").config();
 
 const app = express();
@@ -12,6 +13,7 @@ app.use(express.json());
 app.get("/", (req, res) => {
     res.send("The Genius Car is Running");
 })
+
 
 app.listen(port, () => {
     console.log(`The Server Running on Port: ${port}`);
